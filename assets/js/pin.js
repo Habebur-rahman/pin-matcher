@@ -39,6 +39,23 @@ document.getElementById('calculator').addEventListener('click', function (event)
        typeNumber.value = newNumber;
     }
 });
+
+document.getElementById('button').addEventListener('click', function(){
+    const oldPin = document.getElementById('pin-input');
+    const newPin = oldPin.value;
+
+    const oldNumberType = document.getElementById('calculator-input');
+    const newNumberType = oldNumberType.value;
+
+
+    if (newNumberType === newPin){
+        alert ('Pin Match');
+    }
+    else{
+        alert ('Pin Didnot Match');
+    }
+
+});
 // submit section end
 
 
