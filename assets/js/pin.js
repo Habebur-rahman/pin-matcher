@@ -20,9 +20,26 @@ document.getElementById('btn-pin').addEventListener('click', function(){
 
     const pinField = document.getElementById('pin-input');
     pinField.value = getPin;
-})
-
-
-
-
+});
 // pin section end
+
+// submit section start
+document.getElementById('calculator').addEventListener('click', function (event){
+    const  number = event.target.innerText;
+    const typeNumber = document.getElementById('calculator-input');
+    const previousNumber = typeNumber.value;
+
+    if (isNaN(number)){
+        if (number === 'C'){
+            typeNumber.value = '';
+        }
+    }
+    else {
+       const newNumber = previousNumber + number ;
+       typeNumber.value = newNumber;
+    }
+});
+// submit section end
+
+
+
